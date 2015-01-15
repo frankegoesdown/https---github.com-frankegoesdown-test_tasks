@@ -1,0 +1,4 @@
+#CREATE  TABLE "main"."users" ("UID" INTEGER PRIMARY KEY  NOT NULL  UNIQUE , "Name" VARCHAR DEFAULT 255)
+#CREATE  TABLE "main"."messages" ("UID" INTEGER, "msg" TEXT check(typeof("msg") = 'text') )
+#SELECT users.Name, count(messages.msg) from users LEFT JOIN messages ON users.UID = messages.UID group by users.Name;
+#SELECT name, count(msg)  FROM users LEFT JOIN messages ON users.UID = messages.UID group by Name
